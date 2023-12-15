@@ -1,0 +1,11 @@
+# Ignored file list
+syntax: glob
+
+### General ###
+# stale editor backups
+*~
+*.aux
+*.fls
+*.log
+*.fdb_latexmk
+*.synctex.gz
