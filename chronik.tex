@@ -1,31 +1,54 @@
-\documentclass{book}
+\documentclass[openany]{book}
+% openany: keine leere Seite vor Kapitel
 
 \input{settings.tex}
 
+\begin{document}
+%HERE YOU CAN CHANGE THE MARGIN SIZE
+\newgeometry{left=2cm,right=2cm,outer=2cm,inner=2cm}
+%DISTANCE BETWEEN COLUMNS 
+\setlength\columnsep{30pt}
 
-\chapter{Die ersten Jahre}
-\input{./chap/Gruendung.tex}
-\input{./chap/Statuten-1876.tex}
+\captionsetup{labelformat=empty} % Bildtitel ohne Kapitelangabe
+
+
+\chapter{1874-1900}
+\input{./chap/1874-1900/Gruendung.tex}
 \begin{figure}[p]
-    \centering
-    \includegraphics[scale=0.5]{./chap/MGH-Statuten-1874-S1.jpg}
+    \includegraphics[scale=0.25]{./chap/1874-1900/MGH-Statuten-1874-S1.jpg}
+    \includegraphics[scale=0.25]{./chap/1874-1900/MGH-Statuten-1874-S2.jpg}
     \label{fig:Statuten-1874}
 \end{figure}
-\begin{figure}[p]
-    \centering
-    \includegraphics[scale=0.5]{./chap/MGH-Statuten-1874-S2.jpg}
-    \label{fig:Statuten-1874}
-\end{figure}
-\input{./chap/1875-1900.tex}
+\input{./chap/1874-1900/Statuten-1876.tex}
+\input{./chap/1874-1900/1875-1900.tex}
 
-\chapter{1900-1924}
+\chapter{1900-1925}
 
 \begin{figure}[p]
     \centering
-    \includegraphics{./chap/MGH-1905.jpg}
+    \includegraphics{./chap/1900-1925/MGH-1905.jpg}
     \label{fig:mgh-1905}
     \caption{1905}
 \end{figure}
+\input{./chap/1900-1925/1900-1925.tex}
+
+\chapter{1925-1950}
+\begin{figure}[p]
+    \centering
+    \includegraphics{./chap/1925-1950/MGH-1926.jpg}
+    \label{fig:mgh-1926}
+    \caption{1926}
+\end{figure}
+\input{./chap/1925-1950/1925-1950.tex}
+
+\chapter{1950-1974}
+\begin{figure}[p]
+    \centering
+    \includegraphics{./chap/1950-1974/MGH-1958.jpg}
+    \label{fig:mgh-1958}
+    \caption{1958}
+\end{figure}
+\input{./chap/1950-1974/1950-1974.tex}
 
 
 
@@ -35,9 +58,9 @@
 {%
     \section{\arabic{year}}
     \begin{figure}[p]
-        \centerline{\includegraphics[max size={\textwidth}{\textheight},keepaspectratio]{./chap/\arabic{year}/\arabic{year}.pdf}}
+        \centerline{\includegraphics[max size={\textwidth}{\textheight},keepaspectratio]{./chap/1974-1999/\arabic{year}/\arabic{year}.pdf}}
     \end{figure}
-    \input{./chap/\arabic{year}/Jahresbericht.tex}
+    \input{./chap/1974-1999/\arabic{year}/Jahresbericht.tex}
 }
 
 \chapter{2000-2024}
@@ -46,11 +69,11 @@
     \section{\arabic{year}}
     \ifnum\value{year}=2021
     \else
-        \begin{figure}[p]
-            \centerline{\includegraphics[max size={\textwidth}{\textheight},keepaspectratio]{./chap/\arabic{year}/\arabic{year}.pdf}}
-        \end{figure}
+    \begin{figure}[p]
+        \centerline{\includegraphics[max size={\textwidth}{\textheight},keepaspectratio]{./chap/2000-2024/\arabic{year}/\arabic{year}.pdf}}
+    \end{figure}
     \fi
-    \input{./chap/\arabic{year}/Jahresbericht.tex}
+    \input{./chap/2000-2024/\arabic{year}/Jahresbericht.tex}
 }
 
 \end{document}

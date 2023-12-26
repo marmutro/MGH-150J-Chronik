@@ -14,7 +14,7 @@
 \usepackage{pdfpages}
 \usepackage{forloop}
 \usepackage[export]{adjustbox}
-
+\usepackage{caption}
 
 % \titleformat{\chapter}[display]
 %   {\normalfont\bfseries}{}{0pt}{\Huge}
@@ -32,7 +32,7 @@
 
 \fancypagestyle{plain}{
     \lhead{}
-	\fancyhead{}
+    \fancyhead{}
     \fancyfoot{}
     \renewcommand{\headrulewidth}{0pt}
 }
@@ -49,11 +49,3 @@
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 
-\begin{document}
-
-%\input{./chap/cover.tex}
-
-%HERE YOU CAN CHANGE THE MARGIN SIZE
-\newgeometry{left=2cm,right=2cm,outer=2cm,inner=2cm}
-%DISTANCE BETWEEN COLUMNS 
-\setlength\columnsep{30pt}
