@@ -4,35 +4,51 @@
 \input{settings.tex}
 
 \begin{document}
-%HERE YOU CAN CHANGE THE MARGIN SIZE
-\newgeometry{left=2cm,right=2cm,outer=2cm,inner=2cm}
-%DISTANCE BETWEEN COLUMNS 
-\setlength\columnsep{30pt}
-
-\captionsetup{labelformat=empty} % Bildtitel ohne Kapitelangabe
 
 
-\chapter{1874-1900}
+\chapter{Die ersten 100 Jahre}
+\begin{figure}[h]
+    \includegraphics[scale=0.25]{./Cover-100-Jahr-Chronik.jpg}
+\end{figure}
+\section{Vorgeschichte}
+\input{./Vorgeschichte.tex}
+\clearpage
+
+
+\section{1874-1900}
 \input{./chap/1874-1900/Gruendung.tex}
-\begin{figure}[p]
+\begin{figure}[h]
     \includegraphics[scale=0.25]{./chap/1874-1900/MGH-Statuten-1874-S1.jpg}
     \includegraphics[scale=0.25]{./chap/1874-1900/MGH-Statuten-1874-S2.jpg}
     \label{fig:Statuten-1874}
 \end{figure}
 \input{./chap/1874-1900/Statuten-1876.tex}
 \input{./chap/1874-1900/1875-1900.tex}
+\clearpage
 
-\chapter{1900-1925}
+\section{1900-1925}
 
-\begin{figure}[p]
-    \centering
-    \includegraphics{./chap/1900-1925/MGH-1905.jpg}
+\begin{figure}
+    \centerline{\includegraphics{./chap/1900-1925/MGH-1905.jpg}}
     \label{fig:mgh-1905}
     \caption{1905}
 \end{figure}
+\begin{figure}[h]
+    \centerline{\includegraphics{./chap/1900-1925/MGH-1921.jpg}}
+    \label{fig:mgh-1921}
+    \caption{1921}
+\end{figure}
 \input{./chap/1900-1925/1900-1925.tex}
+\begin{figure}[h]
+    \centerline{
+        \includegraphics{./chap/1900-1925/Fasnacht-1920er-1.jpg}
+        \includegraphics{./chap/1900-1925/Fasnacht-1920er-2.jpg}}
+    \label{fig:mgh-fasnacht-1920}
+    \caption{Fasnacht in den 1920ern}
+\end{figure}
+\clearpage
 
-\chapter{1925-1950}
+\section{1925-1950}
 \begin{figure}[p]
     \centering
     \includegraphics{./chap/1925-1950/MGH-1926.jpg}
@@ -40,8 +56,29 @@
     \caption{1926}
 \end{figure}
 \input{./chap/1925-1950/1925-1950.tex}
+\begin{figure}[h]
+    \centerline{
+        \includegraphics{./chap/1925-1950/Fasnacht-1930er.jpg}
+        \includegraphics{./chap/1925-1950/Fasnacht-vor-Kreuz-Scheune-1930er.jpg}
+    }
+    \label{fig:mgh-fasnacht-1930}
+    \caption{Fasnacht in den 1930ern}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics{./chap/1925-1950/Fasnacht-1946.jpg}
+    \label{fig:mgh-fasnacht-1940}
+    \caption{Fasnacht in den 1940ern}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics{./chap/1925-1950/Weisser-Sontag-1946.jpg}
+    \label{fig:mgh-weisssontag-prozession}
+    \caption{Weisser Sonntag 1946}
+\end{figure}
+\clearpage
 
-\chapter{1950-1974}
+\section{1950-1974}
 \begin{figure}[p]
     \centering
     \includegraphics{./chap/1950-1974/MGH-1958.jpg}
@@ -49,31 +86,40 @@
     \caption{1958}
 \end{figure}
 \input{./chap/1950-1974/1950-1974.tex}
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=2.0]{./chap/1950-1974/Musikreise-1960er.jpg}
+    \label{fig:mgh-musigreise-1960}
+    \caption{Musikreise 1960}
+\end{figure}
 
 
 \chapter{1974-1999}
+
 \newcounter{year}
 \forloop{year}{1974}{\value{year} < 2000}%
 {%
     \section{\arabic{year}}
     \begin{figure}[p]
-        \centerline{\includegraphics[max size={\textwidth}{\textheight},keepaspectratio]{./chap/1974-1999/\arabic{year}/\arabic{year}.pdf}}
+        \centerline{\includegraphics[max
+        size={\textwidth}{\textheight},keepaspectratio]{./chap/1974-1999/\arabic{year}/\arabic{year}.pdf}}
     \end{figure}
     \input{./chap/1974-1999/\arabic{year}/Jahresbericht.tex}
+    \clearpage
 }
 
 \chapter{2000-2024}
 \forloop{year}{2000}{\value{year} < 2024}%
 {%
-    \section{\arabic{year}}
-    \ifnum\value{year}=2021
+    \section{\arabic{year}} \ifnum\value{year}=2021
     \else
     \begin{figure}[p]
-        \centerline{\includegraphics[max size={\textwidth}{\textheight},keepaspectratio]{./chap/2000-2024/\arabic{year}/\arabic{year}.pdf}}
+        \centerline{\includegraphics[max
+        size={\textwidth}{\textheight},keepaspectratio]{./chap/2000-2024/\arabic{year}/\arabic{year}.pdf}}
     \end{figure}
     \fi
     \input{./chap/2000-2024/\arabic{year}/Jahresbericht.tex}
+    \clearpage
 }
 
 \end{document}
