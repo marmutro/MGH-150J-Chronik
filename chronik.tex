@@ -1,10 +1,15 @@
-\documentclass[openany]{book}
-% openany: keine leere Seite vor Kapitel
+\documentclass[]{book}
+
+
+\title{150 Jahre}
+\author{Musikgesellschaft Hildisrieden}
+\date{Januar 2024}
 
 \input{settings.tex}
 
 \begin{document}
 
+\maketitle
 
 \chapter{Die ersten 100 Jahre}
 \begin{figure}[ht]
@@ -12,7 +17,6 @@
 \end{figure}
 \section{Vorgeschichte}
 \input{./Vorgeschichte.tex}
-\clearpage
 
 
 \section{1874-1900}
@@ -28,18 +32,29 @@
 
 \section{1900-1925}
 
-\begin{figure}
-    \centerline{\includegraphics{./chap/1900-1925/MGH-1905.jpg}}
-    \label{fig:mgh-1905}
-    \caption{1905}
-\end{figure}
-\begin{figure}[ht]
-    \centerline{\includegraphics{./chap/1900-1925/MGH-1921.jpg}}
-    \label{fig:mgh-1921}
-    \caption{1921}
-\end{figure}
+\groupphoto{./chap/1900-1925/MGH-1905.jpg}
+{\emph{Erstes Vereinsfoto 1905}\\
+    Von links nach rechts sitzend:\\
+    Estermann Josef, Halden, Troxler Xaver, Wiederkehr, Muff Peter, Lehrer,
+    Troxler Kaspar, Moos\\
+    Von links nach rechts stehend:\\
+    Bühlmann Rudolf, Hermetsmatt, Müller Heinrich, Dorf, Estermann Heinrich,
+    Traselingen, Suter Kaspar, Dorf, Suter Hans-Georg, Dorf} {fig:mgh-1905}
+
+
+\groupphoto{./chap/1900-1925/MGH-1921.jpg}{ \emph{Die Musikgesellschaft 1921}\\
+    Von links nach rechts sitzend:\\
+    Estermann Heinrich, Troxler Kaspar, Troxler Alois, Dirigent, Esterman Alois,
+    Troxler Alois\\
+    1. Reihe stehend:\\
+    Diesler Josef, Estermann Heinrich, Suppiger Hans, Estermann Jakob, Zwinggi
+    Josef, Suter Josef, Erni Leo, Zwinggi Jakob, Suter Kaspar, Gassmann Balz\\
+    2. Reihe stehend:\\
+    Estermann Karl, Estermann Josef, Estermann Jakob, Estermann
+    Jakob}{fig:mgh-1921}
+
 \input{./chap/1900-1925/1900-1925.tex}
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \centerline{
         \includegraphics{./chap/1900-1925/Fasnacht-1920er-1.jpg}
         \includegraphics{./chap/1900-1925/Fasnacht-1920er-2.jpg}}
@@ -49,13 +64,22 @@
 \clearpage
 
 \section{1925-1950}
-\begin{figure}[ht]
-    \centering
-    \includegraphics{./chap/1925-1950/MGH-1926.jpg}
-    \label{fig:mgh-1926}
-    \caption{1926}
-\end{figure}
 \input{./chap/1925-1950/1925-1950.tex}
+
+\groupphoto{./chap/1925-1950/MGH-1926.jpg}
+{\emph{Musikfest Hochdorf 1926}\\
+    Sitzend:\\
+    Zwinggi Josef, Estermann Karl, Estermann Heinrich, Estermann Alois, Troxler
+    Alois, Troxler Kaspar\\
+    1. Reihe stehend:\\
+    Suppiger Hans, Gassmann Balz, Schmid Josef, Rüttimann Josef, Troxler Alois,
+    Dirigent, Zwinggi Jakob, Jutz Hans, Estermann Jakob, Estermann Heinrich,
+    Disler Josef\\
+    2. Reihe stehend:\\
+    Meier Xaver, Estermann Jakob, Erni Leo, Estermann Jakob, Kramis Kaspar}
+{fig:mgh-1926}
+
+
 \begin{figure}[ht]
     \centerline{
         \includegraphics{./chap/1925-1950/Fasnacht-1930er.jpg}
@@ -79,12 +103,25 @@
 \clearpage
 
 \section{1950-1974}
-\begin{figure}[ht]
-    \centering
-    \includegraphics{./chap/1950-1974/MGH-1958.jpg}
-    \label{fig:mgh-1958}
-    \caption{1958}
-\end{figure}
+
+\groupphoto{./chap/1950-1974/MGH-1958.jpg}
+{\emph{Die Muskikgesellschaft 1958}\\
+    Sitzend:\\
+    Troxler Jakob, Suppiger Hans, Estermann Leo, Distel Anton, Amrein Josef,
+    Suter Fridolin, Bründler Josef, Troxler Kaspar, Estermann Otto, Estermann
+    Leo\\
+    1. Reihe:\\
+    Gassmann Alois, Troxler Josef, Troxler Franz, Troxler Hermann, Troxler Hans,
+    Sommerhalder Albert, Dirigent, Estermann Alois, Käppeli Hans, Käppeli Jakob,
+    Troxler Silvester, Troxler Hans\\
+    2. Reihe:\\
+    Muri Otto, Estermann Hans, Gassmann Josef, Wolf Franz, Rüttimann Josef,
+    Schmid Alois, Estermann Franz, Estermann Anton, Troxler Stefan, Troxler
+    Karl, Kramis Alois\\
+    3. Reihe:\\
+    Suter Jakob, Winiger Hans, Fleischli Josef, Steffen August, Wolf Josef }
+{fig:mgh-1958}
+
 \input{./chap/1950-1974/1950-1974.tex}
 \begin{figure}[ht]
     \centering
@@ -95,6 +132,22 @@
 \clearpage
 
 \chapter{1974-1999}
+
+\groupphoto{./chap/1974-1999/1974/MGH-1974.jpg}
+{\emph{Neuuniformierung 1974}\\
+    1. Reihe:\\
+    Stierli Marcel, ???, Estermann Alois, Troxler Hermann, Estermann Leo, Dörig
+    Franz, Limacher Franz, Direktor, Troxler Kaspar, Dörig Kaspar, Bieri
+    Andreas, Estermann Otto, Koller Alois, Troxler Alois\\
+    2. Reihe:\\
+    Arnold Franz, ???, Estermann Klaus, ???, Disler Fritz, ???, Estermann Franz,
+    Luterbach Walter, Gassmann Alois, Portmann Anton, ???\\
+    3. Reihe:\\
+    Wolf Franz, ???, ???, Rüttimann Franz, Estermann Anton, Rüttimann Josef,
+    Rüttimann Walter, Estermann Hans, Troxler Walter?\\
+    4. Reihe:\\
+    Troxler Karl, ???, Troxler Edgar, Estermann Bruno, ???, Estermann Franz,
+    Estermann Hugo, Wolf Josef, ???, ??? } {fig:mgh-1974}
 
 \newcounter{year}
 \forloop{year}{1974}{\value{year} < 2000}%
@@ -114,12 +167,10 @@
 \chapter{2000-2024}
 \forloop{year}{2000}{\value{year} < 2024}%
 {%
-    \section{\arabic{year}}
-    \ifnum\value{year}=2021
+    \section{\arabic{year}} \ifnum\value{year}=2021
     \else
     \begin{figure}[ht]
-        \center{
-        \includegraphics[max
+        \center{ \includegraphics[max
         size={\textwidth}{\textheight},keepaspectratio]{./chap/2000-2024/\arabic{year}/\arabic{year}.pdf}
         }
     \end{figure}

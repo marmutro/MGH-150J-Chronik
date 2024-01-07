@@ -10,4 +10,5 @@ syntax: glob
 *.fdb_latexmk
 *.synctex.gz
 *.ps
-chronik.pdf
+*.xdv
+*.pdf
