@@ -74,7 +74,7 @@
         }
 }
 
-\newcommand{\concertprogsvertical}[3]{{
+\newcommand{\ConcertProgsTwoVertical}[3]{{
             \begin{figure}[htp]
                 \centering
                 \def\theight{0.485}
@@ -83,6 +83,25 @@
                 }\\
                 \subfloat{%
                     \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#3/#3.pdf}%
+                }
+            \end{figure}
+        }}
+
+\newcommand{\ConcertProgsFourOnPage}[5]{{
+            \begin{figure}[htp]
+                \centering
+                \def\theight{0.47}
+                \subfloat{%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#2/#2.pdf}%
+                }\hfil
+                \subfloat{%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#3/#3.pdf}%
+                }\\
+                \subfloat{%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#4/#4.pdf}%
+                }\hfil
+                \subfloat{%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#5/#5.pdf}%
                 }
             \end{figure}
         }}
