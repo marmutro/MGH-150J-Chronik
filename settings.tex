@@ -2,7 +2,8 @@
 \usepackage{polyglossia}
 \usepackage[a4paper, landscape, margin=2cm, twoside, bindingoffset=1cm]{geometry}
 \usepackage{multicol}
-\usepackage{graphicx}
+\usepackage[labelformat=simple]{subfig}
+\usepackage{graphicx} % showframe
 \usepackage{geometry}
 \usepackage{lipsum}
 \usepackage{verbatim}
@@ -55,20 +56,35 @@
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 
+\renewcommand{\thesubfigure}{\relax}  % Do nothing for the counter »subfigure«
+
 % \setlength\columnsep{1cm} %distance between multicolumn columns
 \captionsetup{font=small, labelformat=empty} % Bildtitel ohne Kapitelangabe
 
 \newcommand{\groupphoto}[3]{{
             \captionsetup{singlelinecheck=false} % left aligned
-            \begin{figure}[!ht]
+            \begin{figure}[!htp]
                 \centering
                 \begin{measuredfigure}
-                    \includegraphics[scale=1.5,max size={\textwidth}{\textheight},keepaspectratio]{#1}
+                    \includegraphics[width=0.95\textwidth, height=0.8\textheight, keepaspectratio]{#1}
                     \caption{#2}
                 \end{measuredfigure}
                 \label{#3}
             \end{figure}
         }
 }
+
+\newcommand{\concertprogsvertical}[3]{{
+            \begin{figure}[htp]
+                \centering
+                \def\theight{0.485}
+                \subfloat{%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#2/#2.pdf}%
+                }\\
+                \subfloat{%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#3/#3.pdf}%
+                }
+            \end{figure}
+        }}
 
 \newenvironment{history}{\begin{multicols}{2}}{\end{multicols}} % multicolumn for history text

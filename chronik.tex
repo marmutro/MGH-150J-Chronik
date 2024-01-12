@@ -9,8 +9,14 @@
 
 \begin{document}
 
+\frontmatter
 \maketitle
 
+\tableofcontents
+
+\mainmatter
+
+\part{Geschichte}
 \chapter{Die ersten 100 Jahre}
 \begin{figure}[ht]
     \includegraphics[scale=0.25]{./Cover-100-Jahr-Chronik.jpg}
@@ -22,8 +28,17 @@
 \section{1874-1900}
 \input{./chap/1874-1900/Gruendung.tex}
 \begin{figure}[ht]
-    \includegraphics[scale=0.25]{./chap/1874-1900/MGH-Statuten-1874-S1.jpg}
-    \includegraphics[scale=0.25]{./chap/1874-1900/MGH-Statuten-1874-S2.jpg}
+    % \includegraphics[scale=0.25]{./chap/1874-1900/MGH-Statuten-1874-S1.jpg}
+    % \includegraphics[scale=0.25]{./chap/1874-1900/MGH-Statuten-1874-S2.jpg}
+    \centering
+    \subfloat{%
+        \includegraphics[width=0.45\textwidth]{./chap/1874-1900/MGH-Statuten-1874-S1.jpg}%
+
+    }\hfil
+    \subfloat{%
+        \includegraphics[width=0.45\textwidth]{./chap/1874-1900/MGH-Statuten-1874-S2.jpg}%
+    }
+    \caption{Statuten 25. März 1876}
     \label{fig:Statuten-1874}
 \end{figure}
 \input{./chap/1874-1900/Statuten-1876.tex}
@@ -44,10 +59,10 @@
 
 \groupphoto{./chap/1900-1925/MGH-1921.jpg}{ \emph{Die Musikgesellschaft 1921}\\
     Von links nach rechts sitzend:\\
-    Estermann Heinrich, Troxler Kaspar, Troxler Alois, Dirigent, Esterman Alois,
+    Estermann Heinrich, Troxler Kaspar, Troxler Alois, Dirigent, Estermann Alois,
     Troxler Alois\\
     1. Reihe stehend:\\
-    Diesler Josef, Estermann Heinrich, Suppiger Hans, Estermann Jakob, Zwinggi
+    Disler Josef, Estermann Heinrich, Suppiger Hans, Estermann Jakob, Zwinggi
     Josef, Suter Josef, Erni Leo, Zwinggi Jakob, Suter Kaspar, Gassmann Balz\\
     2. Reihe stehend:\\
     Estermann Karl, Estermann Josef, Estermann Jakob, Estermann
@@ -133,7 +148,7 @@
 
 \chapter{1974-1999}
 
-\groupphoto{./chap/1974-1999/1974/MGH-1974.jpg}
+\groupphoto{./chap/1975-2000/1974/MGH-1974.jpg}
 {\emph{Neuuniformierung 1974}\\
     1. Reihe:\\
     Stierli Marcel, ???, Estermann Alois, Troxler Hermann, Estermann Leo, Dörig
@@ -150,33 +165,97 @@
     Estermann Hugo, Wolf Josef, ???, ??? } {fig:mgh-1974}
 
 \newcounter{year}
-\forloop{year}{1974}{\value{year} < 2000}%
+\forloop{year}{1975}{\value{year} < 1987}%
 {%
     \section{\arabic{year}}
-    \begin{figure}[ht]
-        \centerline{\includegraphics[max
-        size={\textwidth}{\textheight},keepaspectratio]{./chap/1974-1999/\arabic{year}/\arabic{year}.pdf}}
-    \end{figure}
-    \input{./chap/1974-1999/\arabic{year}/Jahresbericht.tex}
+    \input{./chap/1975-2000/\arabic{year}/Jahresbericht.tex}
     \clearpage
 }
 
 
-\clearpage
+% \chapter{2001-2024}
+% \forloop{year}{2001}{\value{year} < 2025}%
+% {%
+%     \section{\arabic{year}}
+%     \input{./chap/2001-2024/\arabic{year}/Jahresbericht.tex}
+%     \clearpage
+% }
 
-\chapter{2000-2024}
-\forloop{year}{2000}{\value{year} < 2024}%
-{%
-    \section{\arabic{year}} \ifnum\value{year}=2021
-    \else
-    \begin{figure}[ht]
-        \center{ \includegraphics[max
-        size={\textwidth}{\textheight},keepaspectratio]{./chap/2000-2024/\arabic{year}/\arabic{year}.pdf}
-        }
-    \end{figure}
-    \fi
-    \input{./chap/2000-2024/\arabic{year}/Jahresbericht.tex}
-    \clearpage
-}
+\part{Konzerte}
+% \chapter{1901-1925}
+% \chapter{1926-1950}
+% \chapter{1951-1974}
+
+\chapter{1975-2000}
+
+% \begin{figure}[htp]
+%     \centering
+%     \def\theight{0.45}
+%     \subfloat[Bild A]{%
+%         \includegraphics[height=\theight\textheight]{example-image-a}%
+%     }\hfil
+%     \subfloat[Bild B]{%
+%         \includegraphics[height=\theight\textheight]{example-image-b}%
+%     }\\
+%     \subfloat[Bild C]{%
+%         \includegraphics[height=\theight\textheight]{example-image-a}%
+%     }\hfil
+%     \subfloat[Bild D]{%
+%         \includegraphics[height=\theight\textheight]{example-image-b}%
+%     }
+% \end{figure}
+
+\concertprogsvertical{1975-2000}{1975}{1976}
+\concertprogsvertical{1975-2000}{1977}{1978}
+\concertprogsvertical{1975-2000}{1979}{1980}
+\concertprogsvertical{1975-2000}{1981}{1982}
+\concertprogsvertical{1975-2000}{1983}{1984}
+\concertprogsvertical{1975-2000}{1985}{1986}
+\concertprogsvertical{1975-2000}{1987}{1988}
+\concertprogsvertical{1975-2000}{1989}{1990}
+\concertprogsvertical{1975-2000}{1991}{1992}
+\concertprogsvertical{1975-2000}{1993}{1994}
+\concertprogsvertical{1975-2000}{1995}{1996}
+\concertprogsvertical{1975-2000}{1997}{1998}
+\concertprogsvertical{1975-2000}{1999}{2000}
+
+\chapter{2001-2024}
+
+\concertprogsvertical{2001-2024}{2001}{2002}
+\concertprogsvertical{2001-2024}{2003}{2004}
+\concertprogsvertical{2001-2024}{2005}{2006}
+\concertprogsvertical{2001-2024}{2007}{2008}
+\concertprogsvertical{2001-2024}{2009}{2010}
+\concertprogsvertical{2001-2024}{2011}{2012}
+\concertprogsvertical{2001-2024}{2013}{2014}
+\concertprogsvertical{2001-2024}{2015}{2016}
+\concertprogsvertical{2001-2024}{2017}{2018}
+\concertprogsvertical{2001-2024}{2019}{2020}
+
+\begin{figure}[htp]
+    \centering
+    \def\theight{0.485}
+    \subfloat{%
+        \framebox{2021: Kein Konzert wegen Covid Pandemie}
+    }\\
+    \subfloat{%
+        \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/2001-2024/2022/2022.pdf}%
+    }
+\end{figure}
+
+\concertprogsvertical{2001-2024}{2023}{2024}
+
+
+\part{Festbesuche}
+
+\part{Mitglieder}
+
+\chapter{Dirigenten}
+
+\chapter{Präsidenten}
+
+\backmatter
+
+\chapter{Anhang}
 
 \end{document}
