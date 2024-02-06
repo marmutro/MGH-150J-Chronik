@@ -4,7 +4,6 @@
 \usepackage{multicol}
 \usepackage[labelformat=simple]{subfig}
 \usepackage{graphicx} % showframe
-\usepackage{geometry}
 \usepackage{lipsum}
 \usepackage{verbatim}
 \usepackage{eso-pic}
@@ -18,6 +17,7 @@
 \usepackage{caption}
 \usepackage{csquotes}
 \usepackage{threeparttable}
+\usepackage{longtable}
 
 \setdefaultlanguage[variant=swiss]{german}
 
@@ -66,7 +66,7 @@
             \begin{figure}[!htp]
                 \centering
                 \begin{measuredfigure}
-                    \includegraphics[width=0.95\textwidth, height=0.8\textheight, keepaspectratio]{#1}
+                    \includegraphics[width=0.93\textwidth, height=0.8\textheight, keepaspectratio]{#1}
                     \caption{#2}
                 \end{measuredfigure}
                 \label{#3}
@@ -107,3 +107,5 @@
         }}
 
 \newenvironment{history}{\begin{multicols}{2}}{\end{multicols}} % multicolumn for history text
+
+
