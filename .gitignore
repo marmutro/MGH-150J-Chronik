@@ -11,4 +11,4 @@ syntax: glob
 *.synctex.gz
 *.ps
 *.xdv
-*.pdf
+chronik.pdf
