@@ -18,9 +18,10 @@
 \usepackage{csquotes}
 \usepackage{threeparttable}
 \usepackage{longtable}
+\usepackage{floatpag}
 
 \setdefaultlanguage[variant=swiss]{german}
-
+\setlength{\columnsep}{1cm}
 
 \titleformat{\part}{\normalfont\Huge\bfseries}{}{0em}{}
 \titleformat{\chapter}{\normalfont\huge\bfseries}{}{0em}{}
@@ -55,71 +56,85 @@
 
 % \setlength\columnsep{1cm} %distance between multicolumn columns
 \captionsetup{font=small, labelformat=empty} % Bildtitel ohne Kapitelangabe
+\captionsetup[subfigure]{justification=justified,singlelinecheck=false}
 
-\newcommand{\groupphoto}[3]{{
+\newcommand{\groupphoto}[4][0.8]{
+    {
             \captionsetup{singlelinecheck=false} % left aligned
-            \begin{figure}[!htp]
+            \begin{figure}[]
+                \thisfloatpagestyle{empty}
                 \centering
+                \def\theight{#1}
                 \begin{measuredfigure}
-                    \includegraphics[width=0.93\textwidth, height=0.8\textheight, keepaspectratio]{#1}
-                    \caption{#2}
+                    \includegraphics[width=0.93\textwidth,height=\theight\textheight, keepaspectratio]{#2}
                 \end{measuredfigure}
-                \label{#3}
+                \caption{#3}
+                \label{#4}
             \end{figure}
         }
 }
 
-\newcommand{\ConcertProg}[2]{{
+\newcommand{\portrait}[3][0.8]{
+    {
+            \captionsetup{singlelinecheck=false} % left aligned
+            \begin{figure}[!htp]
+                \def\theight{#1}
+                \begin{measuredfigure}
+                    \includegraphics[width=0.93\textwidth, height=\theight\textheight, keepaspectratio]{#2}
+                    \caption{#3}
+                \end{measuredfigure}
+            \end{figure}
+        }
+}
+\newcommand{\ConcertProg}[2][0.8]{{
             \begin{figure}[htp]
                 \centering
-                \def\theight{0.8}
-                \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#2/#2.pdf}%
-                }
+                \def\theight{#1}
+                \includegraphics[height=\theight\textheight,keepaspectratio]{#2}%
             \end{figure}
         }}
 
-\newcommand{\ConcertProgsTwoVertical}[3]{{
+\newcommand{\ConcertProgsTwoVertical}[3][0.485]{{
             \begin{figure}[htp]
                 \centering
-                \def\theight{0.485}
+                \def\theight{#1}
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#2/#2.pdf}%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{#2}%
                 }\\
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#3/#3.pdf}%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{#3}%
                 }
             \end{figure}
         }}
 
-\newcommand{\ConcertProgsTwoHorizontal}[3]{{
+\newcommand{\ConcertProgsTwoHorizontal}[3][0.485]{{
             \begin{figure}[htp]
                 \centering
-                \def\theight{0.8}
+                \def\twidth{#1}
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#2/#2.pdf}%
+                    \includegraphics[height=\twidth\textwidth,keepaspectratio]{#2}%
                 }\hfil
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#3/#3.pdf}%
+                    \includegraphics[height=\twidth\textwidth,keepaspectratio]{#3}%
                 }
             \end{figure}
         }}
 
-\newcommand{\ConcertProgsFourOnPage}[5]{{
+\newcommand{\ConcertProgsFourOnPage}[5][0.47]{{
             \begin{figure}[htp]
                 \centering
-                \def\theight{0.47}
+                \def\theight{#1}
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#2/#2.pdf}%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{#2}%
                 }\hfil
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#3/#3.pdf}%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{#3}%
                 }\\
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#4/#4.pdf}%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{#4}%
                 }\hfil
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{./chap/#1/#5/#5.pdf}%
+                    \includegraphics[height=\theight\textheight,keepaspectratio]{#5}%
                 }
             \end{figure}
         }}
