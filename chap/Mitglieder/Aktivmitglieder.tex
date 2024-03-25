@@ -3,10 +3,11 @@
 \newsavebox\mitgliederbox
 \setbox\mitgliederbox\vbox{\hsize=\dimexpr0.5\textwidth-0.5\columnsep
     \makeatletter\col@number\@ne\makeatother
+    \DeclareEmphSequence{\bfseries\textbf} % \emph bold
     \begin{longtable}{ l l r }
         Eintrittsjahr &                                           & Aktiv-Jahre \\
 
-        \emph{1874}   & Disler Josef, Landwirt, Dorf              & 15          \\
+        \textit{1874} & Disler Josef, Landwirt, Dorf              & 15          \\
                       & Troxler Jakob, Metzger, Dorf              & 10          \\
                       & Troxler Alois, Landwirt, Moos             & 10          \\
                       & Troxler Josef, Landwirt, Dorf             & 4           \\
@@ -144,7 +145,7 @@
         1969          & Stierli Marcel                            & 10          \\
                       & Rüttimann Walter                          & 23          \\
                       & Luterbach Walter                          & 19          \\
-                      & Dörig Franz                               & 56-         \\
+                      & \emph{Dörig Franz}                        & 56-         \\
                       & Koller Alois,                             & 19          \\
         1970          & Troxler Paul, Ausserbuchen                & ?           \\
         1971          & Rüttimann Franz                           & 12          \\
@@ -167,31 +168,31 @@
                       & Troxler Beat                              & 11          \\
         1978          & Estermann Jakob                           & 20          \\
                       & Schmid Armin                              & 31          \\
-                      & Koller Beat                               & 16+1996-    \\
+                      & Koller Beat                               & 35          \\
                       & Troxler Thomas                            & 2           \\
         1979          & Kleemann Anton                            & 21          \\
-                      & Urs Schneider                             & 1           \\
-        1980          & Bachmann Anton                            & 62-         \\
+                      & Schneider Urs                             & 1           \\
+        1980          & \emph{Bachmann Anton}                     & 62-         \\
                       & Bucher Kandid                             & 12          \\
                       & Fleischlin Anton                          & 11          \\
                       & Niederberger Eugen                        & ?           \\
         1981          & Estermann Martin                          & 19          \\
                       & Estermann Otmar                           & 22 (MGH)    \\
-                      & Wolf Josef jun.                           & 44-         \\
+                      & \emph{Wolf Josef jun.}                    & 44-         \\
         1982          & Jenni Anton                               & 2           \\
-        1983          & Stöckli Hans                              & 19+         \\
+        1983          & \emph{Stöckli Hans}                       & 36-         \\
         1984          & Emmenegger Yvonne                         & 14          \\
-                      & Troxler Martin                            & 34-         \\
-        1986          & Wolf Stefan                               & 36-         \\
+                      & \emph{Troxler Martin}                     & 34-         \\
+        1986          & \emph{Wolf Stephan}                       & 37-         \\
                       & Estermann Beat                            & 21          \\
-                      & Troxler Christoph                         & 39-         \\
+                      & \emph{Troxler Christoph}                  & 39-         \\
                       & Gassmann Martin                           & 10          \\
                       & Bucher Werner                             & 11          \\
                       & Tschofen Albert                           & 15          \\
         1987          & Amrein Peter                              & 3           \\
                       & Bachmann Martin                           & 3           \\
         1988          & Troxler Oskar                             & 9           \\
-                      & Troxler Alexander                         & 36-         \\
+                      & \emph{Troxler Alexander}                  & 37-         \\
         1989          & Troxler Stefan                            & ?           \\
                       & Arnold Marcel                             & 4           \\
                       & Krieger Andy                              & 4           \\
@@ -199,25 +200,25 @@
         1991          & Dörig Thomas                              & 5           \\
         1992          & Wolf Thomas                               & 17          \\
         1993          & Rüttimann Reto                            & 7           \\
-                      & Bachmann Beat                             & 31-         \\
+                      & \emph{Bachmann Beat}                      & 31-         \\
                       & Troxler Armand                            & 9           \\
                       & Zurfluh René                              & 4           \\
                       & Hofer Cyrill                              & 2           \\
         1994          & Rüttimann Adrian                          & 6           \\
                       & Rüttimann Karin                           & 6           \\
-                      & Burkart Renate                            & 8           \\
+                      & Troxler-Burkhard Renate                   & 8           \\
                       & Luterbach Bruno                           & 6           \\
-                      & Aregger Martin                            & 30-         \\
+                      & \emph{Aregger Martin}                     & 30-         \\
                       & Renggli Andreas                           & 2           \\
                       & Gretener Bruno                            & 3           \\
         1996          & Fleischlin Andreas                        & 3           \\
                       & Steiner Anita                             & 3           \\
-        1997          & Erni Christoph                            & 27-         \\
+        1997          & \emph{Erni Christoph}                     & 27-         \\
                       & Fleischli Daniel                          &             \\
         1998          & Fellmann Matthias                         & 3           \\
         1999          & Rub Mattias                               & 25          \\
                       & Bachmann Dhani                            & 3           \\
-                      & Klaus Roland                              & 37?         \\
+                      & \emph{Klaus Roland}                       & 37-         \\
                       & Thürig Daniel                             & 2           \\
                       & Niederberger Urs                          &             \\
         2000          & Wey Angelika                              & 2           \\
@@ -227,26 +228,26 @@
                       & Fleischlin Stefan                         & 2           \\
                       & Stöckli Roger                             & 1           \\
         2003          & Rüttimann Antonia                         & 1           \\
-                      & Banz Markus                               & 15-         \\
+                      & \emph{Banz Markus}                        & 15-         \\
                       & Käppeli Markus                            &             \\
                       & Bucher Oliver                             & 3           \\
                       & Muff Stefan                               & 5           \\
                       & Thürig Andreas                            & 3           \\
-        2004          & Schneider Christoph                       & 20          \\
+        2004          & \emph{Schneider Christoph}                & 20-         \\
                       & Banz Ursula                               & 2           \\
         2006          & Kümin Julian ?                            & 5?          \\
-                      & Hüsler Fabian                             &             \\
+                      & \emph{Hüsler Fabian}                      & 18-         \\
                       & Wermelinger Roger                         &             \\
-        2007          & Barmet Stefan                             & 16-         \\
-        2008          & Büchler Marina                            & 15          \\
+        2007          & \emph{Barmet Stefan}                      & 17-         \\
+        2008          & Andermatt-Büchler Marina                  & 15          \\
                       & Andermatt Manuel                          &             \\
-                      & Disler Beat                               &             \\
+                      & \emph{Disler Beat}                        & 16-         \\
                       & Fleischli Dario                           &             \\
                       & Niggli Mathias                            & 5           \\
-                      & Schneider Stephan                         &             \\
-                      & Troxler Benedikt                          &             \\
+                      & \emph{Schneider Stephan}                  & 16-         \\
+                      & \emph{Troxler Benedikt}                   & 16-         \\
         2009          & Pfister Severin                           & 3           \\
-        2010          & Estermann Peter                           &             \\
+        2010          & \emph{Estermann Peter}                    & 14          \\
         2011          & Estermann Dominik                         &             \\
                       & Bucher Simon                              &             \\
         2012          & Troxler Seraina                           &             \\
