@@ -3,7 +3,9 @@
 \usepackage[a4paper, landscape, margin=2cm, twoside, bindingoffset=1cm]{geometry}
 \usepackage{multicol}
 \usepackage[labelformat=simple]{subfig}
-\usepackage{graphicx} % showframe
+\usepackage{graphicx}
+\usepackage{wrapfig}
+% \usepackage{showframe}
 \usepackage{lipsum}
 \usepackage{verbatim}
 \usepackage{eso-pic}
@@ -53,6 +55,7 @@
 \titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{}{0em}{}
 \titleformat{\subparagraph}[runin]{\normalfont\normalsize\bfseries}{0}{0em}{}
 
+\titlespacing{\part}{0em}{0em}{0em}
 \titlespacing{\chapter}{0em}{0em}{0em}
 
 
@@ -119,33 +122,30 @@
 \newcommand{\ConcertProg}[2][0.8]{{
             \begin{figure}[!htbp]
                 \centering
-                \def\theight{#1}
-                \includegraphics[height=\theight\textheight,keepaspectratio]{#2}%
+                \includegraphics[height=#1\textheight,keepaspectratio]{#2}%
             \end{figure}
         }}
 
 \newcommand{\ConcertProgsTwoVertical}[3][0.485]{{
             \begin{figure}[!htbp]
                 \centering
-                \def\theight{#1}
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{#2}%
+                    \includegraphics[height=#1\textheight,keepaspectratio]{#2}%
                 }\\
                 \subfloat{%
-                    \includegraphics[height=\theight\textheight,keepaspectratio]{#3}%
+                    \includegraphics[height=#1\textheight,keepaspectratio]{#3}%
                 }
             \end{figure}
         }}
 
-\newcommand{\ConcertProgsTwoHorizontal}[3][0.485]{{
+\newcommand{\ConcertProgsTwoHorizontal}[3][0.85]{{
             \begin{figure}[!htbp]
                 \centering
-                \def\theight{#1}
                 \subfloat{%
-                    \includegraphics[height=\theight\textwidth,keepaspectratio]{#2}%
+                    \includegraphics[height=#1\textheight,keepaspectratio]{#2}%
                 }\hfil
                 \subfloat{%
-                    \includegraphics[height=\theight\textwidth,keepaspectratio]{#3}%
+                    \includegraphics[height=#1\textheight,keepaspectratio]{#3}%
                 }
             \end{figure}
         }}
