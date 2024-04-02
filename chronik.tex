@@ -1,4 +1,4 @@
-\documentclass[]{book}
+\documentclass{book}
 
 
 \title{150 Jahre}
@@ -37,49 +37,13 @@
 \section{1950-1974}
 \input{./chap/1950-1974/1950-1974.tex}
 
+
+
 \chapter{1975-2000}
 \input{./chap/1975-2000/1975-2000.tex}
 
-
-
-
 \chapter{2001-2024}
-
-
-\groupphoto{0.96}{0.85}{./chap/2001-2024/2010/MGH-2010.jpg}
-{\emph{Willisau 2010}\\
-    1. Reihe:\\
-    Maja Achermann, Beat Koller, Markus Banz, Mathias Niggli, Martin Estermann,
-    Josef Wolf, Michael Rösch, Christoph Erni, Franz Dörig, Martin Aregger,
-    Silvia Schurtenberger\\
-    2. Reihe:\\
-    Christoph Schneider, Fabian Hüsler, Stephan Wolf, Benedikt Troxler, Urs
-    Niederberger, Beat Disler, Markus Käppeli, Martin Troxler\\
-    3. Reihe:\\
-    Toni Bachmann, Peter Fleischli, Marina Büchler, Daniel Fleischli, Severin
-    Pfister, Stefan Barmet, Dario Fleischli, Beat Bachmann, Christoph Troxler,
-    Roland Klaus\\
-    4. Reihe:\\
-    Stephan Schneider, Peter Estermann, Armin Schmid, Franz Erni, Alexander
-    Troxler, Roger Wermelinger, Mathias Rub, Manuel Andermatt
-} {fig:mgh-2010}
-
-
-\groupphoto{1.0}{1.0}{./chap/2001-2024/2021/MGH-2021.jpg}
-{\emph{Neuuniformierung 2021}\\
-    1. Reihe:\\
-    Alissa ???, Stephan Wolf, Hans Stöckli, Noe Stadelmann, Franz Dörig,
-    Vivienne Bucher, Peter Stadelmann, Lian Wolf, Mattia Klaus, Fabian Hüsler,
-    Elia Troxler, André Schmid, Barbara Lingg-Banz\\
-    2. Reihe:\\
-    Christoph Troxler, Marina Büchler, Robin Estermann, Benedikt Troxler, Filip
-    Estermann, Kilian Rüttimann, Beat Disler, Christoph Schneider, Christoph
-    Erni, Oliver Schneider, Beat Bachmann, Alexander Troxler\\
-    3. Reihe:\\
-    Toni Bachmann, Manuel Stirnimann, Yanis Wolf, Jonas Furrer, Stefan Barmet,
-    Silvan Wolf, Martin Troxler, Roland Klaus, Peter Estermann, Josef Wolf, Stephan
-    Schneider, Mathias Rub
-} {fig:mgh-2021}
+\input{./chap/2001-2024/2001-2024.tex}
 
 
 \part{Mitglieder}
@@ -98,14 +62,12 @@
 
 
 
-
 \part{Musiktage und Feste}
-\section{vor 1925}
-\section{1925-1949}
-\section{1950-1974}
-\section{1975-1999}
-\section{2000-2024}
-
+\input{./Musikfeste/Vor-1925.tex}
+\input{./Musikfeste/1925-1949.tex}
+\input{./Musikfeste/1950-1974.tex}
+\input{./Musikfeste/1975-1999.tex}
+\input{./Musikfeste/2000-2024.tex}
 
 
 \part{Konzertprogramme}
@@ -116,7 +78,19 @@
 
 \part{Jahresberichte}
 
+% temporary setup to allow easy copying for chat-gpt
+% \pagestyle{empty} % no headers
+% \floatpagestyle{empty} % no headers
+% \renewenvironment{history}{} % single-column
+% end temporary setup
+
 \newcounter{year}
+
+\section{1950-1974}
+\forloop{year}{1974}{\value{year} < 1975}%
+{%
+    \input{./chap/1950-1974/\arabic{year}/Jahresbericht.tex}
+}
 
 \section{1975-2000}
 \forloop{year}{1975}{\value{year} < 2001}%
