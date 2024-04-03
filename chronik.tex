@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass[]{book}
 
 
 \title{150 Jahre}
@@ -11,6 +11,9 @@
 
 \frontmatter
 \maketitle
+
+\input{./Vorwort.tex}
+
 \tableofcontents
 
 \mainmatter
@@ -20,21 +23,21 @@
 \chapter{Die ersten 100 Jahre}
 \input{./Vorgeschichte.tex}
 
-\section{1874-1900}
+\section*{1874-1900}
 \input{./chap/1874-1900/Gruendung.tex}
 \input{./chap/1874-1900/Statuten-1876.tex}
 \input{./chap/1874-1900/1875-1900.tex}
 % \clearpage
 
-\section{1900-1925}
+\section*{1900-1925}
 \input{./chap/1900-1925/1900-1925.tex}
 \clearpage
 
-\section{1925-1950}
+\section*{1925-1950}
 \input{./chap/1925-1950/1925-1950.tex}
 \clearpage
 
-\section{1950-1974}
+\section*{1950-1974}
 \input{./chap/1950-1974/1950-1974.tex}
 
 
@@ -86,24 +89,25 @@
 
 \newcounter{year}
 
-\section{1950-1974}
+\section*{1950-1974}
 \forloop{year}{1974}{\value{year} < 1975}%
 {%
     \input{./chap/1950-1974/\arabic{year}/Jahresbericht.tex}
 }
 
-\section{1975-2000}
+\section*{1975-2000}
 \forloop{year}{1975}{\value{year} < 2001}%
 {%
     \input{./chap/1975-2000/\arabic{year}/Jahresbericht.tex}
 }
 
-\section{2001-2024}
+\section*{2001-2024}
 \forloop{year}{2001}{\value{year} < 2025}%
 {%
     \input{./chap/2001-2024/\arabic{year}/Jahresbericht.tex}
 }
 
 \backmatter
+
 
 \end{document}
