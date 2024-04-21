@@ -23,6 +23,7 @@
 \usepackage{longtable}
 \usepackage{floatpag}
 \usepackage{enumitem}
+\usepackage{needspace}
 
 \setdefaultlanguage[variant=swiss]{german}
 
@@ -55,6 +56,15 @@
 \titleformat{\paragraph}[runin]{\normalfont\normalsize\bfseries}{}{0em}{}
 \titleformat{\subparagraph}[runin]{\normalfont\normalsize\bfseries}{0}{0em}{}
 
+% Definieren, wie viel Platz mindestens vorhanden sein muss
+\newcommand{\subsectionbreak}{\needspace{8\baselineskip}}
+
+\titleformat{\subsection}[hang]
+{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{\subsectionbreak}
+[\titlerule\vspace{1ex}]  % Fügt eine horizontale Linie nach dem Titel ein
+
+
+% Anpassen des Formats für Unterabschnittstitel
 \titlespacing{\part}{0em}{0em}{0em}
 \titlespacing{\chapter}{0em}{0em}{0em}
 
@@ -176,3 +186,4 @@
 
 \newcommand{\multicolphoto}[2][0.93]{{\includegraphics[width=#1\columnwidth]{#2}}}
 % \newcommand{\multicolphoto}[2][0.93]{}
+
