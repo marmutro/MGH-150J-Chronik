@@ -14,7 +14,9 @@
 
 \input{./Vorwort.tex}
 
+\renewcommand{\baselinestretch}{0.8}\normalsize
 \tableofcontents
+\renewcommand{\baselinestretch}{1.0}\normalsize
 
 \mainmatter
 
@@ -73,40 +75,11 @@
 
 
 \part{Konzertprogramme}
-
 \input{Konzertprogramme/Konzertprogramme.tex}
 
 
-
-\part{Jahresberichte}
-
-% temporary setup to allow easy copying for chat-gpt
-% \pagestyle{empty} % no headers
-% \floatpagestyle{empty} % no headers
-% \renewenvironment{history}{} % single-column
-% end temporary setup
-
-\newcounter{year}
-
-\section*{1950-1974}
-\forloop{year}{1974}{\value{year} < 1975}%
-{%
-    \input{./chap/1950-1974/\arabic{year}/Jahresbericht.tex}
-}
-
-\section*{1975-2000}
-\forloop{year}{1975}{\value{year} < 2001}%
-{%
-    \input{./chap/1975-2000/\arabic{year}/Jahresbericht.tex}
-}
-
-\section*{2001-2024}
-\forloop{year}{2001}{\value{year} < 2025}%
-{%
-    \input{./chap/2001-2024/\arabic{year}/Jahresbericht.tex}
-}
+% \input{./Jahresberichte.tex}
 
 \backmatter
-
 
 \end{document}
