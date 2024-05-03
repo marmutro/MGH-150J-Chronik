@@ -48,7 +48,19 @@
 \def\l@chapter#1#2{\begingroup\let\numberline\@gobble\latexl@chapter{#1}{#2}\endgroup}
 \makeatother
 
-\titleformat{\part}{\normalfont\Huge\bfseries}{}{0em}{}
+\titleformat{\part}[block]{\centering\normalfont\sffamily\Huge\bfseries}
+{   % before
+    \begin{figure}
+        \vspace*{2cm}
+        \centering
+        \includegraphics[width=12cm, keepaspectratio]{./Jubiläumslogo.pdf}
+    \end{figure}
+    \vspace*{2cm}
+}
+{0cm}
+{}
+
+
 \titleformat{\chapter}{\normalfont\huge\bfseries}{}{0em}{}
 \titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{}
 \titleformat{\subsection}{\normalfont\large\bfseries}{}{0em}{}
@@ -67,7 +79,6 @@
 % Anpassen des Formats für Unterabschnittstitel
 \titlespacing{\part}{0em}{0em}{0em}
 \titlespacing{\chapter}{0em}{0em}{0em}
-
 
 \setlist[itemize]{leftmargin=0cm}
 
