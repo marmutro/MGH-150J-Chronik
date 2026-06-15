@@ -1,0 +1,44 @@
+{
+  // ---- LaTeX Workshop: build with XeLaTeX via latexmk ----
+  // This book needs XeLaTeX (polyglossia + Unicode filenames). The recipe
+  // below forces the xelatex engine; it also honours the project .latexmkrc.
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk (xelatex)",
+      "command": "latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (xelatex)",
+      "tools": ["latexmk (xelatex)"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+
+  // Build on save, keep chronik.pdf next to the source, tidy aux files.
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.outDir": "%DIR%",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux", "*.fdb_latexmk", "*.fls", "*.log", "*.synctex.gz", "*.xdv",
+    "*.out", "*.toc", "*.lof", "*.lot", "*.bbl", "*.blg"
+  ],
+
+  // Show the PDF in a VS Code tab with SyncTeX (Ctrl+click source <-> PDF).
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  // ---- LTeX+: Swiss-German grammar/spell check ----
+  "ltex.language": "de-CH",
+  "ltex.dictionary": {
+    "de-CH": [":.vscode/ltex.dictionary.de-CH.txt"]
+  }
+}
