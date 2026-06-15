@@ -1,0 +1,15 @@
+% Standalone document: produces a separate PDF containing only the
+% Jahresberichte. Reuses the shared settings.tex (packages, formatting,
+% forloop, the history environment, ...), exactly like chronik.tex does.
+% Build:  latexmk jahresberichte-standalone.tex
+\documentclass[]{book}
+
+\input{settings.tex}
+
+\begin{document}
+
+\mainmatter
+
+\input{./Jahresberichte.tex}
+
+\end{document}

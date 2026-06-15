@@ -16,3 +16,4 @@ syntax: glob
 *.lot
 *.out
 chronik.pdf
+jahresberichte-standalone.pdf
